@@ -13,7 +13,7 @@ print(reverse_string("Hello"))
 #FizzBuzz
 #Print numbers 1 to 100. If divisible by 3 → print "Fizz". If by 5 → "Buzz". If by both → "FizzBuzz". Otherwise print the number.
 for i in range(1,101):
-    if i%15=0:
+    if i%15 == 0:
         print("FizzBuzz")
     elif i%3==0:
         print("Fizz")
