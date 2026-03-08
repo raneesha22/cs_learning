@@ -21,4 +21,21 @@ for i in range(1,101):
         print("Buzz")
     else:
         print(i)
-        
+
+#Check if a String is a Palindrome
+#Return True if a string reads the same forwards and backwards. e.g. "racecar" → True, "hello" → False. Ignore spaces and uppercase.
+
+def is_it_palindrome(s):
+    s = s.lower().replace(" ","")
+
+    left = 0
+    right=len(s)-1
+
+    while left<right:
+        if s[left] != s[right]
+        return False
+
+    left += 1
+    right -= 1
+
+    return True     
