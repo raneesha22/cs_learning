@@ -38,4 +38,18 @@ def is_it_palindrome(s):
     left += 1
     right -= 1
 
-    return True     
+    return True  
+
+#Find Duplicate in a List
+# 
+def is_duplicate(nums):
+    seen = set()
+    duplicate = set(0
+                    
+        for num in nums:
+            if num in seen:
+                duplicate.add(num)
+            else:
+                seen.add(num)) 
+      
+        return.list(duplicate)
