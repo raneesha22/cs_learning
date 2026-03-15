@@ -53,3 +53,18 @@ def is_duplicate(nums):
                 seen.add(num)) 
       
         return.list(duplicate)
+    
+#TWO SUM
+#Given a list of numbers and a target, return the indices of the two numbers that add up to the target. e.g. [2,7,11,15], target=9 → [0,1] because 2+7=9.
+
+def two_sum(nums,target):
+    seen{}
+
+    for i,num in enumerate(nums):
+        complement=target-num
+
+        if complement in seen:
+            return[seen[complement],i]
+        seen[num]=i
+
+    return[]
