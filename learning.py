@@ -85,3 +85,25 @@ def fibonacci(n):
         b=a+b
 
         return b
+    
+
+
+#Anagram check
+#same letters , different order
+
+#first of all if the length doesnt match then return false , then make them into 2 lists and iterate trough one against the other and remove one by one 
+
+def is_anagram(s1,s2):
+    if len(s1) != len(s2):
+        return False
+    
+    s1 = list(s1)
+    s2 = list(s2)
+
+    for char in s1:
+        if char in s2:
+            s2.remove(char)
+        else:
+            return False
+        
+    return True
