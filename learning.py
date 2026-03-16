@@ -119,3 +119,28 @@ def is_largest(nums):
             largest = num
         
         return largest
+
+
+#Count Occurences of each element 
+
+#how my though process worked 
+
+def count_occurence(items):
+    counts ={}
+
+    for item in items:
+        if item not in counts:
+            counts[item] = 1
+        else:
+            counts[item] += 1
+    return counts
+
+#what claude gave me
+
+def count_occurence(items):
+    counts = {}
+
+    for item in items:
+        counts[item] = counts.get(item,0) + 1
+
+    return counts
