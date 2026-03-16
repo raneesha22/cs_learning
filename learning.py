@@ -107,3 +107,15 @@ def is_anagram(s1,s2):
             return False
         
     return True
+
+
+#Find the largest number in a list without built in max function
+
+def is_largest(nums):
+    largest = nums[0]
+
+    for num in nums:
+        if num > largest:
+            largest = num
+        
+        return largest
