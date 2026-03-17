@@ -171,3 +171,17 @@ def find_missing(nums):
     actual =sum(nums)
 
     return expected - actual
+
+
+#Implement a stack and use it to reverese a list
+
+def reverse_with_stack(nums):
+    stack=[]
+
+    for num in nums:
+        stack.append(num)
+    
+    result=[]
+
+    for _ in range(len(stack)):
+        result.append(stack.pop())
