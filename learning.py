@@ -144,3 +144,19 @@ def count_occurence(items):
         counts[item] = counts.get(item,0) + 1
 
     return counts
+
+
+#Rotate a list by k-steps
+
+#so for example if we have [1,2,3,4,5] and k=2 then we want to return [4,5,1,2,3]
+#we can use slicing for this . then concatenate both sliced lists toghther
+
+def rotate(nums,k):
+    k=k%len(nums)
+
+    if k ==0:
+        return nums
+    
+    return nums[-k:] + nums[:-k]
+
+
