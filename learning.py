@@ -159,4 +159,15 @@ def rotate(nums,k):
     
     return nums[-k:] + nums[:-k]
 
+#find the missing value in a list of 1 to n
+#forst we need to find the sum if nothing was missing 
+#then have to find actuayl sum
+#then subtract and can find the missing value 
 
+def find_missing(nums):
+    n=len(nums)
+
+    expected = n*(n+1)//2
+    actual =sum(nums)
+
+    return expected - actual
