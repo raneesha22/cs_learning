@@ -185,3 +185,24 @@ def reverse_with_stack(nums):
 
     for _ in range(len(stack)):
         result.append(stack.pop())
+
+
+#Valid Parentheses
+#Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid. An input string is valid if: Open brackets must be closed by the same type of brackets. Open brackets must be closed in the correct order.
+
+#Thinking : since here also it returns true if the forst open is closed last , we can use a stack for thi scenario. we push the opening brackets to the stack them in elif we check
+#whether the closing brackets matches the last opening brackets in the stack and corresponds to the closing of each one. then we pop the last opening bracket from the stack and continue this process until we reach the end of the string. if at the end of the string the stack is empty then we can say that the parentheses are valid otherwise they are not valid.
+
+def is_valid(s):
+    stack = []
+    matching = {')':'(', '}':'{', ']':'['}
+    
+    for ch in s:
+        if ch in matching.values():
+            stack.append(ch)
+        elif ch in matching.keys():
+            if not stack or stack[-1] != matching[ch]:
+                return False
+            stack.pop()
+    if len(stack) == 0:
+        return True
