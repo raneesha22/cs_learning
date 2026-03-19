@@ -206,3 +206,21 @@ def is_valid(s):
             stack.pop()
     if len(stack) == 0:
         return True
+
+
+#Implement a Queue & explain FIFO
+#Using a list for this could be inefficient when theres alot of elements , to remove somethign from the front instantly 
+#we can use deque from collections
+#deque is a double ended queue which allows to append and pop from both ends
+
+from collections import deque
+
+queue = deque()  #creating an emptry list 
+
+queue.append(1)
+queue.append(2)
+queue.append(3) 
+
+first = queue.popleft() #removing the first element from the queue
+print(first) #output: 1
+
